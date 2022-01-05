@@ -4,13 +4,15 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 $size: 50px;
 $tumble-size: 16px;
 $tumble-width: 6px;
-$tumble-pos: $tumble-size / 2;
-$radius: ($size - $tumble-size) / 2;
-$color: var(--primary);
-$color-two: var(--secondary);
+$tumble-pos: calc($tumble-size / 2);
+$radius: calc(($size - $tumble-size) / 2);
+$color: colors.$primary;
+$color-two: colors.$secondary;
 
 @keyframes tumble {
   0% {

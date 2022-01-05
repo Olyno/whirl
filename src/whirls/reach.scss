@@ -1,17 +1,31 @@
-@import 'common/utils';
 /**
   * reach
   *
   * @author jh3y
 */
+
+@use 'common/utils' as *;
+@use 'common/colors' as colors;
+
 $items: 10;
 
 @keyframes reach {
-  0%, 10%, 20%, 30%, 50%, 60%, 70%, 80%, 90%, 100% {
-    transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+  0%,
+  10%,
+  20%,
+  30%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    transform: rotate(calc(var(--rotation) * 1deg))
+      translate(0, calc(var(--translation) * 1%));
   }
   50% {
-    transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
+    transform: rotate(calc(var(--rotation) * 1deg))
+      translate(0, calc(var(--translation) * 1.5%));
   }
 }
 .reach {
@@ -23,18 +37,17 @@ $items: 10;
     animation: reach 1s calc(var(--delay) * 1s) infinite ease;
     width: 50%;
     height: 150%;
-    background: var(--primary);
+    background: colors.$primary;
     position: absolute;
-    transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+    transform: rotate(calc(var(--rotation) * 1deg))
+      translate(0, calc(var(--translation) * 1%));
 
     @for $block from 1 through $items {
       &:nth-child(#{$block}) {
-        --delay: #{$block * .1};
+        --delay: #{$block * 0.1};
         --rotation: #{(360 / 10) * $block};
         --translation: 150;
       }
     }
-
   }
-
 }

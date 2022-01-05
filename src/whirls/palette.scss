@@ -1,17 +1,19 @@
-@import 'common/utils';
 /**
   * Palette
   *
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/utils' as *;
+@use 'common/colors' as colors;
+
 $scale-radius: 20px;
 $size: 12px;
-$color-one: var(--primary);
-$color-two: var(--secondary);
-$color-three: var(--primary);
-$color-four: var(--secondary);
-$color-five: var(--primary);
+$color-one: colors.$primary;
+$color-two: colors.$secondary;
+$color-three: colors.$primary;
+$color-four: colors.$secondary;
+$color-five: colors.$primary;
 
 $no-of-dots: 5;
 $dot-colors: ($color-one $color-two $color-three $color-four $color-five);
@@ -40,7 +42,6 @@ $dot-colors: ($color-one $color-two $color-three $color-four $color-five);
       }
     }
   }
-
 }
 
 .palette:before {

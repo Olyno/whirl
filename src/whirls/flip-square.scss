@@ -4,7 +4,9 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $size: 50px;
 
 .flip-square:before {
@@ -24,6 +26,7 @@ $size: 50px;
     transform: perspective($size) rotate(45deg) rotateX(-180deg) rotateY(0deg);
   }
   100% {
-    transform: perspective($size) rotate(45deg) rotateX(-180deg) rotateY(-180deg);
+    transform: perspective($size) rotate(45deg) rotateX(-180deg)
+      rotateY(-180deg);
   }
 }

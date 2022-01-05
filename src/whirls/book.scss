@@ -4,8 +4,10 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
+
 $size: 30px;
-$color: var(--primary);
+$color: colors.$primary;
 $no-of-el: 5;
 
 @keyframes whirl-book {
@@ -41,8 +43,7 @@ $no-of-el: 5;
 
   @for $el from 1 through $no-of-el {
     div:nth-child(#{$el}) {
-      animation-delay: $el * .15s;
+      animation-delay: $el * 0.15s;
     }
   }
-
 }

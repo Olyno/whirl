@@ -1,26 +1,29 @@
-@import 'common/utils';
-@import 'common/spin';
 /**
   * Half ring
   *
   * @author jh3y - jheytompkins.com
 */
+
+@use 'common/utils' as *;
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $radius: 25px;
 $size: 10px;
 $no-of-dots: 5;
-$color: #fff;
+$color: colors.$primary;
 
 @function genShadow() {
   $shadows: ();
   @for $dot from 1 through $no-of-dots {
-    $angle       : (180 / $no-of-dots) * ($dot - 1);
-    $xy          : getPosition($angle, $radius);
-    $dots        : $no-of-dots;
-    $dot-color   : transparentize($color, 1 - ($dot * 0.2));
-    $shad-props  : $xy 0 0 $dot-color;
-    $shadows: append($shadows, $shad-props, comma)
+    $angle: (180 / $no-of-dots) * ($dot - 1);
+    $xy: getPosition($angle, $radius);
+    $dots: $no-of-dots;
+    $dot-color: transparentize($color, 1 - ($dot * 0.2));
+    $shad-props: $xy 0 0 $dot-color;
+    $shadows: append($shadows, $shad-props, comma);
   }
-  @return $shadows
+  @return $shadows;
 }
 
 .half-ring:before {

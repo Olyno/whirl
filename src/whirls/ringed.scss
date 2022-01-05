@@ -4,10 +4,12 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 $band-size: 50px;
 $band-thickness: 6px;
-$band-color: var(--primary);
-$color: var(--secondary);
+$band-color: colors.$primary;
+$color: colors.$secondary;
 $size: 16px;
 $pos: -(($band-size / 2) - ($band-thickness / 2));
 
@@ -26,7 +28,7 @@ $pos: -(($band-size / 2) - ($band-thickness / 2));
   }
 
   &:after {
-    animation: ringed .75s infinite linear both;
+    animation: ringed 0.75s infinite linear both;
     background: $color;
     height: $size;
     transform: rotate(0deg) translateY($pos);

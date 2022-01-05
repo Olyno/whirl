@@ -4,12 +4,16 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 10px;
-$color: var(--primary);
+$color: colors.$primary;
 $no-of-dots: 4;
 
 @keyframes meetup {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(calc(var(--rotation) * 1deg)) translateY(0);
   }
   50% {
@@ -32,10 +36,8 @@ $no-of-dots: 4;
 
     @for $el from 1 through $no-of-dots {
       &:nth-child(#{$el}) {
-        --rotation: #{(360 / $no-of-dots) * $el};
+        --rotation: #{calc(360 / $no-of-dots) * $el};
       }
     }
   }
 }
-
-@import 'common/spin';

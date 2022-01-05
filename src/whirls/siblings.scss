@@ -1,14 +1,16 @@
-@import 'common/spin';
-
-$color: var(--primary);
-$border: 6px;
-$size: 50px;
-
 /**
   * Siblings
   *
   * @author jh3y
 */
+
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
+$border: 6px;
+$size: 50px;
+
 .siblings {
   &:after,
   &:before {
@@ -25,10 +27,9 @@ $size: 50px;
   }
 
   &:before {
-    animation: spin .75s infinite linear reverse;
+    animation: spin 0.75s infinite linear reverse;
     border-left-color: transparent;
     height: $size / 2;
     width: $size / 2;
   }
 }
-

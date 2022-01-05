@@ -4,6 +4,8 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
+
 $size: 16px;
 $no-of-dots: 3;
 $margin: 10px;
@@ -13,7 +15,7 @@ $x1: -($x2);
 $scale: $size / 4;
 
 .dots-flow:before {
-  animation: dots-flow .85s infinite ease;
+  animation: dots-flow 0.85s infinite ease;
   border-radius: 100%;
   content: '';
   height: $size;
@@ -25,24 +27,17 @@ $scale: $size / 4;
 }
 
 @keyframes dots-flow {
-  0%, 100% {
-    box-shadow: $x1 $y 0px 0 white,
-      0px $y 0 0 white,
-      $x2 $y 0 0 white;
+  0%,
+  100% {
+    box-shadow: $x1 $y 0px 0 white, 0px $y 0 0 white, $x2 $y 0 0 white;
   }
   35% {
-    box-shadow: $x1 $y 0 $scale purple,
-      0px $y 0 0 white,
-      $x2 $y 0 0 white;
+    box-shadow: $x1 $y 0 $scale purple, 0px $y 0 0 white, $x2 $y 0 0 white;
   }
   50% {
-    box-shadow: $x1 $y 0 0 white,
-      0px $y 0 $scale purple,
-      $x2 $y 0 0 white;
+    box-shadow: $x1 $y 0 0 white, 0px $y 0 $scale purple, $x2 $y 0 0 white;
   }
   65% {
-    box-shadow: $x1 $y 0px 0 white,
-      0px $y 0 0 white,
-      $x2 $y 0 $scale purple;
+    box-shadow: $x1 $y 0px 0 white, 0px $y 0 0 white, $x2 $y 0 $scale purple;
   }
 }

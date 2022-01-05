@@ -4,7 +4,9 @@
   * @author jh3y
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $ray-thickness: 10px;
 $size: 20px;
 $ray-size: $size * 5;

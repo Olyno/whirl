@@ -4,6 +4,8 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 $width: 40px;
 $height: $width * 1.5;
 .battery {
@@ -11,14 +13,14 @@ $height: $width * 1.5;
   width: $width;
   background: transparent;
   border-radius: 2px;
-  border: 5px solid var(--primary);
+  border: 5px solid colors.$primary;
   position: relative;
 
   &:before {
     content: '';
     height: $width / 2px * 0.6px;
     width: $width / 2px * 1px;
-    background: var(--primary);
+    background: colors.$primary;
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -28,7 +30,30 @@ $height: $width * 1.5;
 
   &:after {
     animation: battery-charge 1s infinite steps(6);
-    background: linear-gradient(0deg, transparent, transparent 5%, var(--primary) 5%, var(--primary) 19%, transparent 19%, transparent 24%, var(--primary) 24%, var(--primary) 38%, transparent 38%, transparent 43%, var(--primary) 43%, var(--primary) 57%, transparent 57%, transparent 62%, var(--primary) 62%, var(--primary) 76%, transparent 76%, transparent 81%, var(--primary) 81%, var(--primary) 95%, transparent 95%);
+    background: linear-gradient(
+      0deg,
+      transparent,
+      transparent 5%,
+      colors.$primary 5%,
+      colors.$primary 19%,
+      transparent 19%,
+      transparent 24%,
+      colors.$primary 24%,
+      colors.$primary 38%,
+      transparent 38%,
+      transparent 43%,
+      colors.$primary 43%,
+      colors.$primary 57%,
+      transparent 57%,
+      transparent 62%,
+      colors.$primary 62%,
+      colors.$primary 76%,
+      transparent 76%,
+      transparent 81%,
+      colors.$primary 81%,
+      colors.$primary 95%,
+      transparent 95%
+    );
     content: '';
     height: 100%;
     left: 50%;

@@ -4,13 +4,17 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color-one: var(--primary);
-$color-two: var(--secondary);
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
+$color-one: colors.$primary;
+$color-two: colors.$secondary;
 $duration: 2s;
 $size: 30px;
 
 @keyframes grow {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -32,7 +36,7 @@ $size: 30px;
     animation: grow $duration infinite ease backwards;
     border-radius: 100%;
     background: $color-one;
-    opacity: .75;
+    opacity: 0.75;
     position: absolute;
     transform-origin: -200% -80%;
   }
@@ -42,5 +46,3 @@ $size: 30px;
     transform-origin: 200% 80%;
   }
 }
-
-@import 'common/spin';

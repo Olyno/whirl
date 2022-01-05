@@ -4,6 +4,8 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 @keyframes stop-and-go {
   0% {
     transform: rotate(0deg);
@@ -17,7 +19,7 @@
 }
 
 $size: 50px;
-$color-one: var(--primary);
+$color-one: colors.$primary;
 $color-two: transparent;
 
 .stop-and-go:before {

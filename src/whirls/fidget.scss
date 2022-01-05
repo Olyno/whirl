@@ -4,6 +4,8 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 @keyframes fidget {
   10% {
     transform: skewX(60deg);
@@ -26,7 +28,7 @@
 }
 
 $size: 40px;
-$color: var(--primary);
+$color: colors.$primary;
 
 .fidget:before {
   animation: fidget 1s infinite ease;

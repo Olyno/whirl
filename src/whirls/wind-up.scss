@@ -4,9 +4,11 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 $size: 50px;
 $border: 6px;
-$color: var(--primary);
+$color: colors.$primary;
 
 @keyframes wind-up {
   0% {

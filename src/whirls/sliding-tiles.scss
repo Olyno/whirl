@@ -3,7 +3,11 @@
   *
   * @author jh3y
 */
+
+@use 'common/colors' as colors;
+
 $reset: translate(-50%, -50%);
+
 @keyframes sliding-tile {
   0% {
     transform: $reset translate(-50%, -50%);
@@ -22,7 +26,7 @@ $reset: translate(-50%, -50%);
   }
 }
 
-$color: var(--primary);
+$color: colors.$primary;
 $duration: 1.25s;
 $size: 20px;
 .sliding-tiles {
@@ -42,4 +46,3 @@ $size: 20px;
     animation: sliding-tile $duration ($duration / -2) infinite linear;
   }
 }
-

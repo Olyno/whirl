@@ -3,11 +3,15 @@
   *
   * @author jh3y
 */
-$color: var(--primary);
-$delay: .2s;
+
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
+$delay: 0.2s;
+$width: 10px;
 $height: 40px;
 $no-of-el: 5;
-$width: 10px;
+$rotation: 86;
 
 @keyframes dominoes {
   0% {
@@ -31,10 +35,11 @@ $width: 10px;
   display: grid;
   grid-gap: $width * 2;
   grid-template-columns: repeat($no-of-el, $width);
-  height: $height;
 
   div {
-    --rotation: 68;
+    height: $height;
+    width: $width;
+    --dominoes-rotation: $rotation;
     background-color: $color;
     opacity: 0;
     transform-origin: bottom right;

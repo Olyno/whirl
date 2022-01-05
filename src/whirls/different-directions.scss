@@ -3,15 +3,17 @@
   *
   * @author jh3y - jheytompkins.com
 */
-@import 'common/utils';
-@import 'common/spin';
+
+@use 'common/utils' as *;
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
 
 $radius-one: 20px;
 $radius-two: 35px;
 $size: 8px;
 $no-of-dots: 7;
 $duration: 1s;
-$color: var(--primary);
+$color: colors.$primary;
 $reset: translate(-50%, -50%);
 
 @function genShadow($radius) {

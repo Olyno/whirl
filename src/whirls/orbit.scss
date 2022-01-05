@@ -3,7 +3,10 @@
   *
   * @author jh3y - jheytompkins.com
 */
-$color: var(--primary);
+
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $distance: 300%;
 $size: 50px;
 

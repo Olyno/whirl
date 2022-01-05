@@ -4,7 +4,9 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $size: 20px;
 
 @keyframes flip-to-square {
@@ -21,15 +23,14 @@ $size: 20px;
   }
 }
 
-
 .flip-to-square {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  height: (3 * $size);
-  width: (3 * $size);
 
   div {
+    height: (3 * $size);
+    width: (3 * $size);
     animation: flip-to-square 1.5s calc(var(--delay) * 1s) infinite backwards;
     background-color: $color;
 
@@ -39,5 +40,4 @@ $size: 20px;
       }
     }
   }
-
 }

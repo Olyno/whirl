@@ -4,10 +4,13 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 50px;
 $depth: 6px;
-$primary: var(--primary);
-$secondary: var(--secondary);
+colors.$primary: colors.$primary;
+colors.$secondary: colors.$secondary;
 
 .color-arc {
   clip-path: inset(0% 50% 50% 0%);
@@ -22,16 +25,14 @@ $secondary: var(--secondary);
     animation: spin 1.25s infinite linear reverse;
     border-width: $depth;
     border-style: solid;
-    border-top-color: $primary;
-    border-bottom-color: $primary;
-    border-left-color: $secondary;
+    border-top-color: colors.$primary;
+    border-bottom-color: colors.$primary;
+    border-left-color: colors.$secondary;
     border-radius: 100%;
-    border-right-color: $secondary;
+    border-right-color: colors.$secondary;
     content: '';
     display: block;
     height: $size;
     width: $size;
   }
 }
-
-@import 'common/spin';

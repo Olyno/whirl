@@ -3,6 +3,9 @@
   *
   * @author jh3y - jheytompkins.com
 */
+
+@use 'common/colors' as colors;
+
 $border: 6px;
 $color: #fff;
 $color-two: transparentize($color, 0.5);

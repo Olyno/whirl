@@ -4,7 +4,9 @@
   * @author jh3y
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $size: 30px;
 
 @keyframes whirl {

@@ -4,7 +4,9 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $size: 40px;
 
 @keyframes fly-by {

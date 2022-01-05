@@ -1,41 +1,49 @@
-@import 'common/utils';
 /**
   * scaling-circle
   *
   * @author jh3y
 */
+
+@use 'common/utils';
+@use 'common/colors' as colors;
+
 $children: 8;
+$radius: 25;
+$size: 10;
 
 @keyframes scaling-circle {
-  0%, 30%, 50%, 100% {
-    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1);
+  0%,
+  30%,
+  50%,
+  100% {
+    transform: rotate(calc(var(--scaling-circle-angle) * 1deg))
+      translate(0, calc($radius * 1px)) scale(1);
   }
   40% {
-    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(0);
+    transform: rotate(calc(var(--scaling-circle-angle) * 1deg))
+      translate(0, calc($radius * 1px)) scale(0);
   }
 }
 
 .scaling-circle {
-  --radius: 25;
-  --size: 10;
-  @include sizeCSS(size);
   position: absolute;
 
   div {
-    height: 100%;
-    width: 100%;
+    height: $size * 1px;
+    width: $size * 1px;
     position: absolute;
     border-radius: 100%;
-    background: var(--primary);
-    animation: scaling-circle .8s calc(var(--delay) * 1s) infinite ease;
-    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px));
+    background: colors.$primary;
+    animation: scaling-circle 0.8s calc(var(--scaling-circle-delay) * 1s)
+      infinite ease;
+    transform: rotate(calc(var(--scaling-circle-angle) * 1deg))
+      translate(0, calc($radius * 1px));
 
     @for $c from 1 through $children {
       &:nth-child(#{$c}) {
-        --angle: #{(360 / $children) * $c};
-        --delay: #{$c * 0.1};
+        --scaling-circle-angle: #{calc(360 / $children) * $c};
+        --scaling-circle-delay: #{$c * 0.1};
       }
     }
   }
-
 }

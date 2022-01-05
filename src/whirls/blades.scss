@@ -5,9 +5,12 @@
   *
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 20px;
 $border: 4px;
-$color: var(--primary);
+$color: colors.$primary;
 $no-of-el: 5;
 $radius: 5px;
 
@@ -32,6 +35,3 @@ $radius: 5px;
     }
   }
 }
-
-
-@import 'common/spin';

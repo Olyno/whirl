@@ -4,7 +4,10 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $radius: 20px;
 $size: 5px;
 
@@ -15,8 +18,5 @@ $size: 5px;
   content: '';
   animation: spin 1s infinite;
   border-radius: 100%;
-  box-shadow: $radius 0 0 $size $color,
-    -($radius) 0 0 $size $color;
+  box-shadow: $radius 0 0 $size $color, -($radius) 0 0 $size $color;
 }
-
-@import 'common/spin';

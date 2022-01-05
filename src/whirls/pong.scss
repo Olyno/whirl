@@ -3,10 +3,13 @@
   *
   * @author jh3y - jheytompkins.com
 */
+
+@use 'common/colors' as colors;
+
 $duration: 6s;
 $size: 100px;
 $line: 2px;
-$color: var(--primary);
+$color: colors.$primary;
 
 // 850 is the limit width ways and 950 height in percentage
 $xLimit: 850;
@@ -17,7 +20,7 @@ $yLimit: 950;
   @if ($pos % 2 == 0) {
     $x: -$xLimit;
   }
-  @return ($x ($y - $yLimit));
+  @return ($x($y - $yLimit));
 }
 
 @function generatePositions($amount) {
@@ -31,7 +34,15 @@ $yLimit: 950;
 $positions: generatePositions(23);
 
 .pong {
-  background: repeating-linear-gradient(180deg, $color 0, $color 4%, transparent 4%, transparent 6%, $color 6%) (($size / 2) - ($line / 2)) 0 / 2px 100% no-repeat;
+  background: repeating-linear-gradient(
+      180deg,
+      $color 0,
+      $color 4%,
+      transparent 4%,
+      transparent 6%,
+      $color 6%
+    )
+    (($size / 2) - ($line / 2)) 0 / 2px 100% no-repeat;
   height: $size;
   position: absolute;
   left: 50%;
@@ -52,7 +63,7 @@ $positions: generatePositions(23);
       width: 5%;
       will-change: transform;
       z-index: 2;
-      content: nth($positions, 1)
+      content: nth($positions, 1);
     }
 
     &:nth-child(2),
@@ -89,7 +100,8 @@ $positions: generatePositions(23);
       } @else {
         $position: nth($positions, $keyframe + 1);
       }
-      transform: translate(-50%, -50%) translate(nth($position, 1) * 1%, nth($position, 2) * 1%);
+      transform: translate(-50%, -50%)
+        translate(nth($position, 1) * 1%, nth($position, 2) * 1%);
     }
   }
 }
@@ -106,7 +118,8 @@ $positions: generatePositions(23);
         @include transformPaddle(nth($position, 2));
       }
     } @else {
-      #{$keyframe * 20%}, #{($keyframe * 20%) + 10%} {
+      #{$keyframe * 20%},
+      #{($keyframe * 20%) + 10%} {
         $position: nth($positions, ($keyframe * 2) + 1);
         @include transformPaddle(nth($position, 2));
       }
@@ -123,7 +136,8 @@ $positions: generatePositions(23);
         @include transformPaddle(nth($position, 2));
       }
     } @else {
-      #{(($keyframe * 20)) * 1%}, #{(($keyframe * 20) - 10) * 1%} {
+      #{(($keyframe * 20)) * 1%},
+      #{(($keyframe * 20) - 10) * 1%} {
         $position: nth($positions, ($keyframe * 2));
         @include transformPaddle(nth($position, 2));
       }

@@ -4,9 +4,10 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
 
 $size: 50px;
-$color-one: var(--primary);
+$color-one: colors.$primary;
 $color-two: var(--bg);
 
 .eclipse:before {

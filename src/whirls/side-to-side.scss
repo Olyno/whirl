@@ -4,7 +4,9 @@
   * @author jh3y
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $size: 30px;
 
 @keyframes side-to-side {
@@ -22,7 +24,7 @@ $size: 30px;
 }
 
 .side-to-side:before {
-  animation: side-to-side .5s infinite alternate ease-in-out;
+  animation: side-to-side 0.5s infinite alternate ease-in-out;
   background-color: $color;
   border-radius: 100%;
   content: '';

@@ -4,8 +4,10 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 $border-width: 5px;
-$color: var(--primary);
+$color: colors.$primary;
 $size: 50px;
 
 @keyframes scan {

@@ -4,13 +4,15 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 $no-of-el: 3;
 $size: 20px;
 $margin: 5px;
 $diff: $size + $margin;
 $start: -((floor($no-of-el / 2)) * $diff + ($size / 2));
-$offset: .5s;
-$color: var(--primary);
+$offset: 0.5s;
+$color: colors.$primary;
 
 @keyframes slide-in {
   0% {
@@ -26,10 +28,7 @@ $color: var(--primary);
     opacity: 0;
     transform: translateX(300%);
   }
-
 }
-
-
 
 .slide-in {
   div {
@@ -50,8 +49,4 @@ $color: var(--primary);
       }
     }
   }
-
-
 }
-
-

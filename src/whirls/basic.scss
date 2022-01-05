@@ -4,6 +4,9 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $thickness: 6px;
 $size: 50px;
 .basic:before {
@@ -11,10 +14,8 @@ $size: 50px;
   display: block;
   height: $size;
   width: $size;
-  animation: spin .5s infinite linear;
-  border: $thickness var(--primary) solid;
-  border-left-color: var(--secondary);
+  animation: spin 0.5s infinite linear;
+  border: $thickness colors.$primary solid;
+  border-left-color: colors.$secondary;
   border-radius: 100%;
 }
-
-@import 'common/spin.scss';

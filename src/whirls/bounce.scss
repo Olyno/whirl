@@ -4,7 +4,9 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $distance: 300%;
 $size: 20px;
 
@@ -18,7 +20,8 @@ $size: 20px;
 }
 
 .bounce:before {
-  animation: whirl-bounce .5s cubic-bezier(.6, .3, .8, .5) alternate infinite;
+  animation: whirl-bounce 0.5s cubic-bezier(0.6, 0.3, 0.8, 0.5) alternate
+    infinite;
   background: $color;
   border-radius: 100%;
   content: '';

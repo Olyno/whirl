@@ -3,9 +3,12 @@
   *
   * @author jh3y - jheytompkins.com
 */
+
+@use 'common/colors' as colors;
+
 $size: 30px;
 $duration: 2s;
-$color: var(--primary);
+$color: colors.$primary;
 
 @keyframes combine-two {
   25% {
@@ -50,6 +53,5 @@ $color: var(--primary);
     &:nth-child(4) {
       --rotation: 315;
     }
-
   }
 }

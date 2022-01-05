@@ -1,13 +1,16 @@
-@import 'common/utils';
-@import 'common/spin';
 /**
   * Spinning dots - scaled
   *
   * @author jh3y - https://github.com/jh3y
 */
+
+@use 'common/utils' as *;
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 8px;
 $no-of-dots: 7;
-$color: var(--primary);
+$color: colors.$primary;
 $radius: 20px;
 $scales: (-4px -4px -3px -2px -1px 1px 2px);
 

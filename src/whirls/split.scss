@@ -1,11 +1,13 @@
-@import 'common/spin';
 /**
   * Split
   *
   * @author jh3y
 */
 
-$color: var(--primary);
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $core-size: 14px;
 $outer-size: 50px;
 $outer-width: 10px;
@@ -31,4 +33,3 @@ $outer-width: 10px;
     width: $core-size;
   }
 }
-

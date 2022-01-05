@@ -4,7 +4,9 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $duration: 2s;
 $size: 50px;
 
@@ -28,10 +30,12 @@ $size: 50px;
 }
 
 @keyframes flip-square-travel-switch {
-  0%, 50% {
+  0%,
+  50% {
     transform: rotate(45deg);
   }
-  50.001%, 100% {
+  50.001%,
+  100% {
     transform: rotate(-45deg);
   }
 }
@@ -46,5 +50,4 @@ $size: 50px;
   100% {
     transform: translate(0, -100%) rotateX(-180deg);
   }
-
 }

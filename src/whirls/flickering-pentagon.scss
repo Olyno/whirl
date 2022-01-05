@@ -3,9 +3,10 @@
   *
   * @author jh3y - jheytompkins.com
 */
-@import 'common/utils';
+@use 'common/utils' as *;
+@use 'common/colors' as colors;
 
-$color: var(--primary);
+$color: colors.$primary;
 $no-of-dots: 5;
 $radius: 30px;
 $size: 6px;
@@ -15,7 +16,7 @@ $size: 6px;
   $dot-color: $color;
   @for $dot from 1 through $no-of-dots {
     @if ($pos == $dot) {
-      $dot-color: var(--secondary);
+      $dot-color: colors.$secondary;
     } @else {
       $dot-color: $color;
     }
@@ -36,7 +37,7 @@ $size: 6px;
 }
 
 .flickering-pentagon:before {
-  animation: flickering-pentagon .25s infinite linear;
+  animation: flickering-pentagon 0.25s infinite linear;
   box-shadow: genShadow(0, $color);
   border-radius: 100%;
   display: block;

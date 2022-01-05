@@ -4,7 +4,9 @@
   * @author jh3y
 */
 
-$color: #fff;
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $dormant: transparentize($color, 0.5);
 
 $height: 20px;
@@ -12,61 +14,40 @@ $margin: 5px;
 $no-of-bars: 5;
 $width: 10px;
 
-
 $y: $height + (2 * $margin);
 
 $x1: (2 * $width) + (2 * $margin);
 $x2: $width + $margin;
 
 @keyframes trigger {
-  0%, 100% {
-    box-shadow: (-($x1)) $y 0 0 $dormant,
-      (-($x2)) $y 0 0 $dormant,
-      0 $y 0 0 $dormant,
-      $x2 $y 0 0 $dormant,
-      $x1 $y 0 0 $dormant;
+  0%,
+  100% {
+    box-shadow: (-($x1)) $y 0 0 $dormant, (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant, $x2 $y 0 0 $dormant, $x1 $y 0 0 $dormant;
   }
   30% {
-    box-shadow: (-($x1)) $y 0 5px $color,
-      (-($x2)) $y 0 0 $dormant,
-      0 $y 0 0 $dormant,
-      $x2 $y 0 0 $dormant,
-      $x1 $y 0 0 $dormant;
+    box-shadow: (-($x1)) $y 0 5px $color, (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant, $x2 $y 0 0 $dormant, $x1 $y 0 0 $dormant;
   }
   40% {
-    box-shadow: (-($x1)) $y 0 0 $dormant,
-      (-($x2)) $y 0 5px $color,
-      0 $y 0 0 $dormant,
-      $x2 $y 0 0 $dormant,
-      $x1 $y 0 0 $dormant;
+    box-shadow: (-($x1)) $y 0 0 $dormant, (-($x2)) $y 0 5px $color,
+      0 $y 0 0 $dormant, $x2 $y 0 0 $dormant, $x1 $y 0 0 $dormant;
   }
   50% {
-    box-shadow: (-($x1)) $y 0 0 $dormant,
-      (-($x2)) $y 0 0 $dormant,
-      0 $y 0 5px $color,
-      $x2 $y 0 0 $dormant,
-      $x1 $y 0 0 $dormant;
+    box-shadow: (-($x1)) $y 0 0 $dormant, (-($x2)) $y 0 0 $dormant,
+      0 $y 0 5px $color, $x2 $y 0 0 $dormant, $x1 $y 0 0 $dormant;
   }
   60% {
-    box-shadow: (-($x1)) $y 0 0 $dormant,
-      (-($x2)) $y 0 0 $dormant,
-      0 $y 0 0 $dormant,
-      $x2 $y 0 5px $color,
-      $x1 $y 0 0 $dormant;
+    box-shadow: (-($x1)) $y 0 0 $dormant, (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant, $x2 $y 0 5px $color, $x1 $y 0 0 $dormant;
   }
   70% {
-    box-shadow: (-($x1)) $y 0 0 $dormant,
-      (-($x2)) $y 0 0 $dormant,
-      0 $y 0 0 $dormant,
-      $x2 $y 0 0 $dormant,
-      $x1 $y 0 5px $color;
+    box-shadow: (-($x1)) $y 0 0 $dormant, (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant, $x2 $y 0 0 $dormant, $x1 $y 0 5px $color;
   }
   80% {
-    box-shadow: (-($x1)) $y 0 0 $dormant,
-      (-($x2)) $y 0 0 $dormant,
-      0 $y 0 0 $dormant,
-      $x2 $y 0 0 $dormant,
-      $x1 $y 0 0 $dormant;
+    box-shadow: (-($x1)) $y 0 0 $dormant, (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant, $x2 $y 0 0 $dormant, $x1 $y 0 0 $dormant;
   }
 }
 

@@ -1,12 +1,13 @@
-
 /**
   * push-out
   * lil push out effect, push one side out and one side in
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 .push-out {
-  --duration: .85;
+  --duration: 0.85;
   height: 100px;
   width: 100px;
   position: relative;
@@ -17,14 +18,16 @@
     height: 20px;
     width: 20px;
     position: absolute;
-    animation: push-out-slide calc(var(--duration) * 1s) infinite alternate ease-in-out;
+    animation: push-out-slide calc(var(--duration) * 1s) infinite alternate
+      ease-in-out;
     transform: translate(0, -100%);
     top: 100%;
     left: 0;
 
     &:after {
-      animation: push-out-flip calc(var(--duration) * 1s) infinite alternate ease-in-out;
-      background: var(--primary);
+      animation: push-out-flip calc(var(--duration) * 1s) infinite alternate
+        ease-in-out;
+      background: colors.$primary;
       content: '';
       height: 100%;
       position: absolute;
@@ -34,7 +37,7 @@
 
   // Use the second for the staionary pillar
   & > div:nth-of-type(2) {
-    background: var(--primary);
+    background: colors.$primary;
     height: 30px;
     left: 50%;
     position: absolute;
@@ -49,7 +52,7 @@
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: calc(var(--duration) * 4s);
-    background: var(--primary);
+    background: colors.$primary;
     bottom: 0;
     content: '';
     height: 40px;
@@ -66,27 +69,38 @@
     animation-name: push-out-pushed-2;
     left: 0;
   }
-
 }
 
 @keyframes push-out-pushed-1 {
-  0%, 18.125%, 50%, 68.125%, 100% {
+  0%,
+  18.125%,
+  50%,
+  68.125%,
+  100% {
     transform: translate(0, 0);
   }
-  25%, 43.125%, 75%, 93.125% {
+  25%,
+  43.125%,
+  75%,
+  93.125% {
     transform: translate(0, 100%);
   }
-
 }
 
 @keyframes push-out-pushed-2 {
-  0%, 18.125%, 50%, 68.125%, 100% {
+  0%,
+  18.125%,
+  50%,
+  68.125%,
+  100% {
     transform: translate(0, 100%);
   }
-  25%, 43.125%, 75%, 93.125% {
+  25%,
+  43.125%,
+  75%,
+  93.125% {
     transform: translate(0, 0);
   }
-
 }
 
 @keyframes push-out-flip {

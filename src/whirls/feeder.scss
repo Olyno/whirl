@@ -4,8 +4,10 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
+
 $size: 20px;
-$color: var(--primary);
+$color: colors.$primary;
 
 @keyframes fed {
   0% {
@@ -67,10 +69,10 @@ $color: var(--primary);
       animation-name: feed;
     }
     &:nth-child(2) {
-      --delay: .25;
+      --delay: 0.25;
     }
     &:nth-child(3) {
-      --delay: .5;
+      --delay: 0.5;
     }
   }
 }

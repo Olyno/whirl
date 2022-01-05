@@ -1,17 +1,18 @@
-@import 'common/spin';
-
 /**
   * Traditional
   *
   * @author jh3y
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 50px;
 .traditional {
   &:before {
-    animation: spin .5s infinite linear;
+    animation: spin 0.5s infinite linear;
     border-radius: 100%;
-    box-shadow: inset -2px 0 0 0px var(--primary);
+    box-shadow: inset -2px 0 0 0px colors.$primary;
     content: '';
     height: $size;
     position: absolute;

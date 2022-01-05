@@ -4,12 +4,15 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 $size: 50px;
-$color-one: var(--primary);
-$color-two: var(--secondary);
+$color-one: colors.$primary;
+$color-two: colors.$secondary;
 
 @keyframes swap {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(0);
   }
   50% {
@@ -23,7 +26,7 @@ $color-two: var(--secondary);
     border-radius: 100%;
     content: '';
     height: $size;
-    opacity: .5;
+    opacity: 0.5;
     position: absolute;
     width: $size;
   }

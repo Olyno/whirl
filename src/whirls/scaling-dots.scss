@@ -4,16 +4,20 @@
   * @author jh3y
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $dot-size: 10px;
 $dot-margin: 5px;
 $no-of-dots: 5;
 
 @keyframes scaling-dots {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(0);
   }
-  40%, 60% {
+  40%,
+  60% {
     transform: scale(1);
   }
 }
@@ -33,7 +37,7 @@ $no-of-dots: 5;
 
     @for $el from 1 through $no-of-dots {
       &:nth-child(#{$el}) {
-        animation-delay: #{($el * .1s)};
+        animation-delay: #{($el * 0.1s)};
       }
     }
   }

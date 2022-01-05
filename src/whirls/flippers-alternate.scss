@@ -4,10 +4,12 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $margin: 5px;
 $no-of-el: 5;
-$offset: .25s;
+$offset: 0.25s;
 $size: 20px;
 $perspective: 2 * $size;
 
@@ -29,27 +31,32 @@ $perspective: 2 * $size;
   }
 }
 
-
 .flippers-alternate {
-  height: $size;
   display: grid;
   grid-template-columns: repeat($no-of-el, $size);
   grid-gap: $margin;
 
   div {
     background-color: $color;
+    height: (3 * $size);
+    width: (3 * $size);
 
     @for $el from 1 through $no-of-el {
       &:nth-of-type(#{$el}) {
         @if $el % 2 > 0 {
-          animation: flippers-alternate ($no-of-el * $offset) ($el * $offset) infinite ease;
+          animation: flippers-alternate
+            ($no-of-el * $offset)
+            ($el * $offset)
+            infinite
+            ease;
+        } @else {
+          animation: flippers
+            ($no-of-el * $offset)
+            ($el * $offset)
+            infinite
+            ease;
         }
-        @else {
-          animation: flippers ($no-of-el * $offset) ($el * $offset) infinite ease;
-        }
-
       }
     }
   }
-
 }

@@ -3,8 +3,12 @@
   *
   * @author jh3y - jheytompkins.com
 */
-$color-one: var(--primary);
-$color-two: var(--secondary);
+
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
+$color-one: colors.$primary;
+$color-two: colors.$secondary;
 $ring-size: 40px;
 $ring-thickness: 2px;
 $radius: ($ring-size / 2) - ($ring-thickness / 2);
@@ -32,5 +36,3 @@ $size: 15px;
     border: $ring-thickness solid $color-one;
   }
 }
-
-@import 'common/spin';

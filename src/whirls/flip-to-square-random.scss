@@ -4,7 +4,9 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $size: 20px;
 
 @keyframes flip-to-square-random {
@@ -21,23 +23,22 @@ $size: 20px;
   }
 }
 
-
 .flip-to-square-random {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  height: (3 * $size);
-  width: (3 * $size);
 
   div {
-    animation: flip-to-square-random 1.5s calc(var(--delay) * 1s) infinite backwards;
+    height: (3 * $size);
+    width: (3 * $size);
+    animation: flip-to-square-random 1.5s calc(var(--delay) * 1s) infinite
+      backwards;
     background-color: $color;
 
     @for $e from 1 through 9 {
       &:nth-child(#{$e}) {
-        --delay: #{random(10) / 50};
+        --delay: #{calc(random(10) / 50)};
       }
     }
   }
 }
-

@@ -4,7 +4,9 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $size: 30px;
 
 @keyframes eight {
@@ -18,7 +20,6 @@ $size: 30px;
   }
   51% {
     transform-origin: right top;
-
   }
   100% {
     transform-origin: right top;

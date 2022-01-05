@@ -3,14 +3,19 @@
   *
   * @author jh3y - jheytompkins.com
 */
+
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $reset: translate(-50%, -50%);
 $size-base: 50px;
 $size-one: 50%;
 $size-two: 75%;
-$color: var(--primary);
+$color: colors.$primary;
 
 @keyframes grow {
-  0%, 100% {
+  0%,
+  100% {
     transform: $reset scale(1);
   }
   50% {
@@ -47,5 +52,3 @@ $color: var(--primary);
     transform-origin: -40% -80%;
   }
 }
-
-@import 'common/spin';

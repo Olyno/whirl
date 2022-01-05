@@ -4,8 +4,9 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
 
-$color: var(--primary);
+$color: colors.$primary;
 $size: 40px;
 $perspective: $size * 4;
 $reset: translate(-50%, -50%);

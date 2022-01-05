@@ -4,11 +4,13 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
+
 $height: 10px;
-$width : 5px;
-$color-one: var(--primary);
-$color-two: var(--secondary);
-$duration: .75s;
+$width: 5px;
+$color-one: colors.$primary;
+$color-two: colors.$secondary;
+$duration: 0.75s;
 
 @keyframes radial {
   0% {

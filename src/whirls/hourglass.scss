@@ -7,14 +7,17 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
+
 $duration: 4s;
-$color-one: var(--primary);
-$color-two: var(--secondary);
+$color-one: colors.$primary;
+$color-two: colors.$secondary;
 $size: 40px;
 $border: 4px;
 
 @keyframes hourglass-spin {
-  0%, 10% {
+  0%,
+  10% {
     background-position: 0 90%;
   }
   40%,
@@ -41,7 +44,6 @@ $border: 4px;
   }
 }
 
-
 .hourglass {
   animation: hourglass-container-spin $duration infinite;
   height: $size;
@@ -61,7 +63,13 @@ $border: 4px;
     animation-timing-function: ease-in-out;
     content: '';
     position: absolute;
-    background-image: linear-gradient(0deg, transparent, transparent 50%, $color-two 50%, $color-two);
+    background-image: linear-gradient(
+      0deg,
+      transparent,
+      transparent 50%,
+      $color-two 50%,
+      $color-two
+    );
   }
 
   &:after {

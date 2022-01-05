@@ -1,9 +1,11 @@
-@import 'common/utils';
 /**
   * Ring of dots
   *
   * @author jh3y
 */
+
+@use 'common/utils' as *;
+@use 'common/colors' as colors;
 
 $scale-radius: 20px;
 $size: 10px;
@@ -14,7 +16,10 @@ $color-one: lighten($color, 33%);
 $color-two: lighten($color, 66%);
 $color-three: lighten($color, 99%);
 
-$dot-colors: ($color $color-three $color-three $color-three $color-three $color-two $color-one);
+$dot-colors: (
+  $color $color-three $color-three $color-three $color-three $color-two
+    $color-one
+);
 
 @function genShadow($pos, $color-set) {
   $shadows: ();

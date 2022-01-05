@@ -4,7 +4,10 @@
   * @author jh3y - jhey.dev
 */
 
-$color: var(--primary);
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $size: 50px;
 $thickness: 10px;
 
@@ -13,10 +16,8 @@ $thickness: 10px;
   content: '';
   height: $size;
   width: $size;
-  animation: spin .5s infinite linear;
+  animation: spin 0.5s infinite linear;
   border: $thickness $color double;
   border-left-style: solid;
   border-radius: 100%;
 }
-
-@import 'common/spin';

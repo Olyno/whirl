@@ -4,9 +4,11 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
 $size: 30px;
 $margin: 10px;
-$color: var(--primary);
+$color: colors.$primary;
 $distance: $size + $margin;
 
 @keyframes scale-dots {
@@ -38,7 +40,6 @@ $distance: $size + $margin;
   100% {
     transform: scale(0) translateX($distance);
   }
-
 }
 
 .scale-dots:before {

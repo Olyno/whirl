@@ -3,10 +3,14 @@
   *
   * @author jh3y - jheytompkins.com
 */
+
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 20px;
-$color: var(--primary);
+$color: colors.$primary;
 $no-of-el: 7;
-$delay: .15s;
+$delay: 0.15s;
 $reset: translate(-50%, -50%);
 
 @keyframes building-blocks {
@@ -27,7 +31,6 @@ $reset: translate(-50%, -50%);
   }
 }
 
-
 .building-blocks {
   position: relative;
   div {
@@ -36,7 +39,8 @@ $reset: translate(-50%, -50%);
     width: $size;
 
     &:after {
-      animation: building-blocks (($no-of-el * 2) * $delay) ease infinite backwards;
+      animation: building-blocks (($no-of-el * 2) * $delay) ease infinite
+        backwards;
       background: $color;
       content: '';
       display: block;
@@ -65,7 +69,6 @@ $reset: translate(-50%, -50%);
     &:nth-child(7) {
       transform: $reset translate(-60%, -120%);
     }
-
   }
   @for $el from 1 through $no-of-el {
     div:nth-child(#{$el}):after {

@@ -4,7 +4,10 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $border: 6px;
 
 $size-one: 50px;
@@ -30,18 +33,16 @@ $size-two: 30px;
   &:before {
     border-bottom-color: transparent;
     border-left-color: transparent;
-    animation: spin .75s infinite linear reverse;
+    animation: spin 0.75s infinite linear reverse;
     height: $size-two;
     width: $size-two;
   }
 
   &:after {
-    animation: spin .5s infinite linear;
+    animation: spin 0.5s infinite linear;
     height: $size-one;
     width: $size-one;
     border-right-color: transparent;
     border-top-color: transparent;
   }
 }
-
-@import 'common/spin';

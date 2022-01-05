@@ -4,8 +4,10 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
+
 $size: 30px;
-$color: var(--primary);
+$color: colors.$primary;
 $swing: 50deg;
 @keyframes pendulum {
   from {

@@ -4,7 +4,9 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $dot-size: 10px;
 $dot-margin: 5px;
 $first: -((2 * $dot-size) + (2 * $dot-margin));
@@ -23,83 +25,60 @@ $hide: -1 * $dot-size;
   width: $dot-size;
 }
 
-
 @keyframes line-of-dots {
   0% {
     box-shadow: $first $dot-size 0 $hide $color,
-      $second $dot-size 0 $hide $color,
-      $third $dot-size 0 $hide $color,
-      $fourth $dot-size 0 $hide $color,
-      $fifth $dot-size 0 $hide $color;
+      $second $dot-size 0 $hide $color, $third $dot-size 0 $hide $color,
+      $fourth $dot-size 0 $hide $color, $fifth $dot-size 0 $hide $color;
   }
   10% {
-    box-shadow: $first $dot-size 0 0 $color,
-      $second $dot-size 0 $hide $color,
-      $third $dot-size 0 $hide $color,
-      $fourth $dot-size 0 $hide $color,
+    box-shadow: $first $dot-size 0 0 $color, $second $dot-size 0 $hide $color,
+      $third $dot-size 0 $hide $color, $fourth $dot-size 0 $hide $color,
       $fifth $dot-size 0 $hide $color;
   }
   20% {
-    box-shadow: $first $dot-size 0 0 $color,
-      $second $dot-size 0 0 $color,
-      $third $dot-size 0 $hide $color,
-      $fourth $dot-size 0 $hide $color,
+    box-shadow: $first $dot-size 0 0 $color, $second $dot-size 0 0 $color,
+      $third $dot-size 0 $hide $color, $fourth $dot-size 0 $hide $color,
       $fifth $dot-size 0 $hide $color;
   }
   30% {
-    box-shadow: $first $dot-size 0 0 $color,
-      $second $dot-size 0 0 $color,
-      $third $dot-size 0 0 $color,
-      $fourth $dot-size 0 $hide $color,
+    box-shadow: $first $dot-size 0 0 $color, $second $dot-size 0 0 $color,
+      $third $dot-size 0 0 $color, $fourth $dot-size 0 $hide $color,
       $fifth $dot-size 0 $hide $color;
   }
   40% {
-    box-shadow: $first $dot-size 0 0 $color,
-      $second $dot-size 0 0 $color,
-      $third $dot-size 0 0 $color,
-      $fourth $dot-size 0 0 $color,
+    box-shadow: $first $dot-size 0 0 $color, $second $dot-size 0 0 $color,
+      $third $dot-size 0 0 $color, $fourth $dot-size 0 0 $color,
       $fifth $dot-size 0 $hide $color;
   }
   50% {
-    box-shadow: $first $dot-size 0 0 $color,
-      $second $dot-size 0 0 $color,
-      $third $dot-size 0 0 $color,
-      $fourth $dot-size 0 0 $color,
+    box-shadow: $first $dot-size 0 0 $color, $second $dot-size 0 0 $color,
+      $third $dot-size 0 0 $color, $fourth $dot-size 0 0 $color,
       $fifth $dot-size 0 0 $color;
   }
   60% {
-    box-shadow: $first $dot-size 0 $hide $color,
-      $second $dot-size 0 0 $color,
-      $third $dot-size 0 0 $color,
-      $fourth $dot-size 0 0 $color,
+    box-shadow: $first $dot-size 0 $hide $color, $second $dot-size 0 0 $color,
+      $third $dot-size 0 0 $color, $fourth $dot-size 0 0 $color,
       $fifth $dot-size 0 0 $color;
   }
   70% {
     box-shadow: $first $dot-size 0 $hide $color,
-      $second $dot-size 0 $hide $color,
-      $third $dot-size 0 0 $color,
-      $fourth $dot-size 0 0 $color,
-      $fifth $dot-size 0 0 $color;
+      $second $dot-size 0 $hide $color, $third $dot-size 0 0 $color,
+      $fourth $dot-size 0 0 $color, $fifth $dot-size 0 0 $color;
   }
   80% {
     box-shadow: $first $dot-size 0 $hide $color,
-      $second $dot-size 0 $hide $color,
-      $third $dot-size 0 $hide $color,
-      $fourth $dot-size 0 0 $color,
-      $fifth $dot-size 0 0 $color;
+      $second $dot-size 0 $hide $color, $third $dot-size 0 $hide $color,
+      $fourth $dot-size 0 0 $color, $fifth $dot-size 0 0 $color;
   }
   90% {
     box-shadow: $first $dot-size 0 $hide $color,
-      $second $dot-size 0 $hide $color,
-      $third $dot-size 0 $hide $color,
-      $fourth $dot-size 0 $hide $color,
-      $fifth $dot-size 0 0 $color;
+      $second $dot-size 0 $hide $color, $third $dot-size 0 $hide $color,
+      $fourth $dot-size 0 $hide $color, $fifth $dot-size 0 0 $color;
   }
   100% {
     box-shadow: $first $dot-size 0 $hide $color,
-      $second $dot-size 0 $hide $color,
-      $third $dot-size 0 $hide $color,
-      $fourth $dot-size 0 $hide $color,
-      $fifth $dot-size 0 $hide $color;
+      $second $dot-size 0 $hide $color, $third $dot-size 0 $hide $color,
+      $fourth $dot-size 0 $hide $color, $fifth $dot-size 0 $hide $color;
   }
 }

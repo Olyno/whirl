@@ -4,6 +4,9 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 50px;
 
 .bar-spin {
@@ -17,12 +20,10 @@ $size: 50px;
     display: block;
     height: 50px;
     width: 10px;
-    animation: spin .5s infinite;
-    background: var(--primary, #fff);
+    animation: spin 0.5s infinite;
+    background: colors.$primary;
     position: absolute;
     left: 50%;
     margin-left: -($size / 10);
   }
 }
-
-@import 'common/spin.scss'

@@ -4,10 +4,12 @@
   * @author jh3y - jheytompkins.com
 */
 
-$color: var(--primary);
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
 $margin: 5px;
 $no-of-el: 5;
-$offset: .25;
+$offset: 0.25;
 $size: 20px;
 $perspective: 2 * $size;
 
@@ -21,13 +23,15 @@ $perspective: 2 * $size;
 }
 
 .flippers {
-  height: $size;
   display: grid;
   grid-template-columns: repeat($no-of-el, $size);
   grid-gap: $margin;
 
   div {
-    animation: flippers calc(#{($no-of-el * $offset)} * 1s) calc(var(--delay) * 1s) infinite ease;
+    height: (3 * $size);
+    width: (3 * $size);
+    animation: flippers calc(#{($no-of-el * $offset)} * 1s)
+      calc(var(--delay) * 1s) infinite ease;
     background-color: $color;
 
     @for $el from 1 through $no-of-el {
@@ -36,6 +40,4 @@ $perspective: 2 * $size;
       }
     }
   }
-
-
 }

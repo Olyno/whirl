@@ -4,10 +4,13 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 30px;
 $radius: -40px;
 $thickness: 5px;
-$color: var(--primary);
+$color: colors.$primary;
 
 .chase {
   position: relative;
@@ -18,7 +21,7 @@ $color: var(--primary);
     height: $size;
     width: $size;
     display: block;
-    animation: out .5s backwards, spin 1.25s .5s infinite ease;
+    animation: out 0.5s backwards, spin 1.25s 0.5s infinite ease;
     border: $thickness solid $color;
     border-radius: 100%;
     box-shadow: 0 $radius 0 -5px $color;
@@ -35,5 +38,3 @@ $color: var(--primary);
     box-shadow: 0 0 0 -5px $color;
   }
 }
-
-@import 'common/spin';

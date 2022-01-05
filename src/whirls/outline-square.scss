@@ -4,9 +4,11 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
+
 $size: 30px;
-$color-one: var(--primary);
-$color-two: var(--secondary);
+$color-one: colors.$primary;
+$color-two: colors.$secondary;
 
 @keyframes outline-square {
   0% {
@@ -29,7 +31,6 @@ $color-two: var(--secondary);
     background: $color-one;
     transform: translate(-100%, -100%);
   }
-
 }
 
 .outline-square:before {

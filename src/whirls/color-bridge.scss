@@ -4,10 +4,13 @@
   * @author jh3y - https://github.com/jh3y
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 50px;
 $thickness: 6px;
-$primary: var(--primary);
-$secondary: var(--secondary);
+colors.$primary: colors.$primary;
+colors.$secondary: colors.$secondary;
 
 .color-bridge {
   clip-path: inset(-2% 0% 50% 0);
@@ -20,12 +23,12 @@ $secondary: var(--secondary);
 
   &:before {
     animation: spin 1.25s infinite linear;
-    border-bottom-color: $primary;
-    border-left-color: $secondary;
+    border-bottom-color: colors.$primary;
+    border-left-color: colors.$secondary;
     border-radius: 100%;
-    border-right-color: $secondary;
+    border-right-color: colors.$secondary;
     border-style: solid;
-    border-top-color: $primary;
+    border-top-color: colors.$primary;
     border-width: $thickness;
     content: '';
     display: block;
@@ -33,5 +36,3 @@ $secondary: var(--secondary);
     width: $size;
   }
 }
-
-@import 'common/spin';

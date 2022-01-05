@@ -4,9 +4,11 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
+
 $size: 10px;
-$color: var(--primary);
-$color-two: var(--secondary);
+$color: colors.$primary;
+$color-two: colors.$secondary;
 $no-of-dots: 11;
 $radius: 30px;
 $scale: 5px;
@@ -29,7 +31,7 @@ $scale: 5px;
 
     &:nth-child(11) {
       background: $color-two;
-      animation: path .5s infinite steps($no-of-dots - 1);
+      animation: path 0.5s infinite steps($no-of-dots - 1);
     }
 
     @for $c from 1 through ($no-of-dots - 1) {

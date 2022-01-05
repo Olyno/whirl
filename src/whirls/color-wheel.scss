@@ -4,14 +4,17 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 50px;
-$color-one: var(--primary);
-$color-two: var(--secondary);
-$color-three: var(--primary);
-$color-four: var(--secondary);
+$color-one: colors.$primary;
+$color-two: colors.$secondary;
+$color-three: colors.$primary;
+$color-four: colors.$secondary;
 
 .color-wheel:before {
-  animation: spin .5s infinite linear;
+  animation: spin 0.5s infinite linear;
   content: '';
   display: block;
   height: $size;
@@ -24,5 +27,3 @@ $color-four: var(--secondary);
   border-right-color: $color-three;
   border-top-color: $color-four;
 }
-
-@import 'common/spin';

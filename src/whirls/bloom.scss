@@ -4,6 +4,8 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
+
 $size: 30px;
 $ring-thickness: 4px;
 
@@ -22,13 +24,13 @@ $ring-thickness: 4px;
   }
 
   &:before {
-    background-color: var(--primary);
+    background-color: colors.$primary;
     animation: scale-up 1s infinite ease;
   }
 
   &:after {
     animation: scale 1s infinite;
-    border: $ring-thickness solid var(--primary);
+    border: $ring-thickness solid colors.$primary;
     left: 0;
     position: absolute;
     top: 0;
@@ -45,7 +47,8 @@ $ring-thickness: 4px;
 }
 
 @keyframes scale {
-  0%, 50% {
+  0%,
+  50% {
     opacity: 0;
   }
   55% {

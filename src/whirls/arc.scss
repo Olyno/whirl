@@ -4,18 +4,18 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $thickness: 6px;
-$color: var(--primary, #fff);
 $size: 50px;
 
 .arc:before {
   animation: spin 0.5s infinite linear;
   border-radius: 100%;
-  border-top: $thickness solid $color;
+  border-top: $thickness solid colors.$primary;
   content: '';
   display: block;
   height: 50px;
   width: 50px;
 }
-
-@import 'common/spin.scss'

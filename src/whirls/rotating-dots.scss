@@ -4,17 +4,25 @@
   * @author jh3y
 */
 
+@use 'common/colors' as colors;
+
+//! Can't put properties outisde, it breaks the animation.
+
 @keyframes rotating-dots {
   0% {
-    transform: translate(calc(var(--translate) * 1%), 0) rotateY(calc(var(--rotation, 0) * 1deg)) rotate(0deg);
+    transform: translate(calc(var(--translate) * 1%), 0)
+      rotateY(calc(var(--rotation, 0) * 1deg)) rotate(0deg);
   }
-  50%, 100% {
-    transform: translate(calc(var(--translate) * 1%), 0) rotateY(calc(var(--rotation, 0) * 1deg)) rotate(180deg);
+  50%,
+  100% {
+    transform: translate(calc(var(--translate) * 1%), 0)
+      rotateY(calc(var(--rotation, 0) * 1deg)) rotate(180deg);
   }
 }
 
 @keyframes rotating-dots-flash {
-  0%, 50% {
+  0%,
+  50% {
     visibility: visible;
   }
   50.0001%,
@@ -32,7 +40,8 @@
   width: calc(var(--size) * 1px);
 
   div {
-    animation: rotating-dots calc(var(--duration) * 1s) calc(var(--delay, 0) * 1s) infinite;
+    animation: rotating-dots calc(var(--duration) * 1s)
+      calc(var(--delay, 0) * 1s) infinite;
     height: 100%;
     position: absolute;
     transform: translate(calc(var(--translate) * 1%), 0);
@@ -40,7 +49,7 @@
 
     &:after,
     &:before {
-      background: var(--primary);
+      background: colors.$primary;
       border-radius: 100%;
       content: '';
       height: 100%;
@@ -49,7 +58,8 @@
     }
 
     &:after {
-      animation: rotating-dots-flash calc(var(--duration) * 1s) calc(var(--delay, 0) * 1s) infinite steps(2);
+      animation: rotating-dots-flash calc(var(--duration) * 1s)
+        calc(var(--delay, 0) * 1s) infinite steps(2);
       transform: translate(-100%, 0);
     }
 
@@ -66,5 +76,4 @@
       --translate: 100;
     }
   }
-
 }

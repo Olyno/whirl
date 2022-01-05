@@ -4,10 +4,12 @@
   * @author jh3y - jheytompkins.com
 */
 
+@use 'common/colors' as colors;
+
 $chomp-angle: 45;
-$chomp-speed: .35s;
-$dot-color: var(--secondary);
-$head-color: var(--primary);
+$chomp-speed: 0.35s;
+$dot-color: colors.$secondary;
+$head-color: colors.$primary;
 $track-height: 10px;
 $track-length: 200px;
 $track-speed: 1.2s;
@@ -15,7 +17,13 @@ $load-size: 5 * $track-height;
 
 .load-man {
   animation: load-man-travel $track-speed infinite linear;
-  background: repeating-linear-gradient(90deg, $dot-color, $dot-color 5%, transparent 5%, transparent 35%);
+  background: repeating-linear-gradient(
+    90deg,
+    $dot-color,
+    $dot-color 5%,
+    transparent 5%,
+    transparent 35%
+  );
   height: $track-height;
   left: 50%;
   margin-top: -($track-height / 2);
@@ -58,7 +66,6 @@ $load-size: 5 * $track-height;
     border-top-color: transparent;
   }
 }
-
 
 @keyframes load-man-travel {
   to {

@@ -3,8 +3,11 @@
   *
   * @author jh3y - jheytompkins.com
 */
-$color: var(--primary);
-$color-two: var(--secondary);
+
+@use 'common/colors' as colors;
+
+$color: colors.$primary;
+$color-two: colors.$secondary;
 $size: 20px;
 $travel: 175%;
 

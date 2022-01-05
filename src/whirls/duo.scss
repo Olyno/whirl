@@ -4,17 +4,20 @@
   * @author jh3y - jhey.dev
 */
 
+@use 'common/spin' as *;
+@use 'common/colors' as colors;
+
 $size: 50px;
 $thickness: 6px;
-$color-one: var(--primary);
-$color-two: var(--secondary);
+$color-one: colors.$primary;
+$color-two: colors.$secondary;
 
 .duo:before {
   height: $size;
   width: $size;
   content: '';
   display: block;
-  animation: spin .5s infinite linear;
+  animation: spin 0.5s infinite linear;
   border-width: $thickness;
   border-style: solid;
   border-bottom-color: $color-one;
@@ -23,5 +26,3 @@ $color-two: var(--secondary);
   border-radius: 100%;
   border-right-color: $color-two;
 }
-
-@import 'common/spin';
