@@ -3,8 +3,9 @@ import fsp from 'fs-extra';
 import path from 'path';
 import postcss from 'postcss';
 import sass from 'sass';
-import config from '../src/whirl.config.json';
+import whirls from '../src/whirl.config.json';
 
+const { single, multi, pseudo } = whirls;
 const distDir = path.join(process.cwd(), 'dist');
 const defaultIndex = path.join(distDir, 'index.js');
 
@@ -34,7 +35,7 @@ const processStyles = async name => {
     });
 };
 
-for (const whirl of config.whirls) {
+for (const whirl of [].concat(single).concat(multi).concat(pseudo)) {
   if (whirl.active) processStyles(whirl.name);
 }
 
