@@ -1,6 +1,20 @@
 {
-  "name": "whirl31",
-  "version": "0.0.0",
+  "name": "@olyno/whirl",
+  "version": "1.0.0",
+  "description": "CSS loading animations with minimal effort",
+  "author": "Olyno",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "contributors": [
+    "jh3y <jhey.dev>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Olyno/whirl/issues"
+  },
+  "homepage": "https://olyno.github.io/whirl",
   "type": "module",
   "scripts": {
     "dev": "vite",
