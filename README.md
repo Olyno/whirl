@@ -39,7 +39,7 @@ Whether you use this project, have learned something from it, or just like it, p
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/olyno)
 
-### Contributing
+## Contributing
 
 See [`CONTRIBUTING`](https://github.com/Olyno/whirl/blob/master/.github/CONTRIBUTING.md).
 
