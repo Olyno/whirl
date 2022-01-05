@@ -16,7 +16,7 @@ Feel free to leave a star to support the project ⭐
 
 ## CSS loading animations with minimal effort!
 
-[![Whirl](https://raw.github.com/Olyno/pics/master/whirl/whirl.gif)](https://raw.github.com/Olyno/pics/master/whirl/whirl.gif)
+[![Whirl](/.github/images/demo.gif)](/.github/images/demo.gif)
 
 `whirl` is a curation of CSS loading animations(whirls! 😅). It started as a drop in `CSS` file to get easy animations using `:pseudo` elements. It's now a collection of loading animations to use, take inspiration from, change and do what you want with 👍
 
