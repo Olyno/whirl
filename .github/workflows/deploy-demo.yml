@@ -1,6 +1,9 @@
-name: Build project correctly
+name: Deploy demo
 
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -25,8 +28,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Build demo
+      - name: Build Project
         run: yarn build
 
-      - name: Build project
-        run: yarn build:package
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
