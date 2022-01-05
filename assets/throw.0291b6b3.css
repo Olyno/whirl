@@ -1,0 +1,1 @@
+@keyframes throw{0%{transform:scale(.75) translate(-250%)}50%{transform:scale(1.5)}to{transform:scale(.75) translate(250%)}}.throw:before{animation:throw .75s infinite alternate ease-in-out;background-color:#fff;border-radius:100%;content:"";height:20px;width:20px}

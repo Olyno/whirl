@@ -1,0 +1,1 @@
+@keyframes spin{to{transform:rotate(360deg)}}.color-wheel:before{animation:spin .5s infinite linear;content:"";display:block;height:50px;width:50px;border-width:25px;border-style:solid;border-left-color:#fff;border-bottom-color:#00f;border-radius:100%;border-right-color:#fff;border-top-color:#00f}

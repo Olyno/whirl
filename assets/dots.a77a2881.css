@@ -1,0 +1,1 @@
+@keyframes spin{to{transform:rotate(360deg)}}.dots:before{display:block;height:5px;width:5px;content:"";animation:spin 1s infinite;border-radius:100%;box-shadow:20px 0 0 5px #fff,-20px 0 0 5px #fff}

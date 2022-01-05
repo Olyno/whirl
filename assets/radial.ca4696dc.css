@@ -1,0 +1,1 @@
+@keyframes radial{0%{transform:rotate(calc(var(--base) * 1deg)) translateY(150%)}to{transform:rotate(calc((var(--base) + 1440) * 1deg)) translateY(150%)}}.radial:after,.radial:before{background-color:var(--color);animation:radial .75s infinite linear;content:"";display:block;height:10px;width:5px}.radial:after{--color: blue;--base: 0}.radial:before{--base: 180;--color: #fff}

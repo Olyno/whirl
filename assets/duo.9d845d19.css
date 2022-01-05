@@ -1,0 +1,1 @@
+@keyframes spin{to{transform:rotate(360deg)}}.duo:before{height:50px;width:50px;content:"";display:block;animation:spin .5s infinite linear;border-width:6px;border-style:solid;border-bottom-color:#fff;border-top-color:#fff;border-left-color:#00f;border-radius:100%;border-right-color:#00f}

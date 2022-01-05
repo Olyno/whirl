@@ -1,0 +1,1 @@
+@keyframes spin{to{transform:rotate(360deg)}}.siblings:after,.siblings:before{border:6px solid #fff;border-radius:100%;content:""}.siblings:after{animation:spin 1.5s infinite linear;border-right-color:transparent;height:50px;width:50px}.siblings:before{animation:spin .75s infinite linear reverse;border-left-color:transparent;height:25px;width:25px}

@@ -1,0 +1,1 @@
+@keyframes stop-and-go{0%{transform:rotate(0)}60%{transform:rotate(1440deg)}to{transform:rotate(1080deg)}}.stop-and-go:before{animation:stop-and-go 1s infinite;border:25px solid #fff;border-left-color:transparent;border-radius:100%;border-right-color:transparent;content:"";height:50px;width:50px}

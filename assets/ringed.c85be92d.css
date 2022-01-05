@@ -1,0 +1,1 @@
+@keyframes ringed{to{transform:rotate(360deg) translateY(-22px)}}.ringed:after,.ringed:before{border-radius:100%;content:"";position:absolute}.ringed:after{animation:ringed .75s infinite linear both;background:blue;height:16px;transform:rotate(0) translateY(-22px);width:16px}.ringed:before{border:6px solid #fff;height:50px;width:50px}

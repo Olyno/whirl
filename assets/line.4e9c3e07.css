@@ -1,0 +1,1 @@
+@keyframes line{0%{background-position:-60px 0}to{background-position:60px 0}}.line:before{animation:line .75s infinite alternate ease-in-out;background:linear-gradient(90deg,#fff,#fff);background-repeat:no-repeat;background-size:60px 20px;content:"";display:block;height:20px;width:60px}

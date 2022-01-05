@@ -1,0 +1,1 @@
+@keyframes wind-up{0%{transform:rotate(0)}10%,15%{transform:rotate(-90deg)}20%,25%{transform:rotate(-180deg)}30%,35%{transform:rotate(-270deg)}40%,50%{transform:rotate(-360deg)}to{transform:rotate(720deg)}}.wind-up:before{animation:wind-up 3s infinite;border:6px solid #fff;content:"";display:block;height:50px;width:50px}

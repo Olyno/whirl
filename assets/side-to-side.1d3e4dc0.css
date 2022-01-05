@@ -1,0 +1,1 @@
+@keyframes side-to-side{0%{opacity:0;transform:translate(-150%)}50%{opacity:1}to{opacity:0;transform:translate(150%)}}.side-to-side:before{animation:side-to-side .5s infinite alternate ease-in-out;background-color:#fff;border-radius:100%;content:"";height:30px;width:30px}

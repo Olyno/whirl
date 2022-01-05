@@ -1,0 +1,1 @@
+@keyframes spin{to{transform:rotate(360deg)}}.half-ring:before{animation:spin 1s infinite linear;border-radius:10px;box-shadow:25px 0 #fff3,20.2254248594px 14.6946313073px #fff6,7.7254248594px 23.7764129074px #fff9,-7.7254248594px 23.7764129074px #fffc,-20.2254248594px 14.6946313073px #fff;height:10px;width:10px;display:block;content:""}

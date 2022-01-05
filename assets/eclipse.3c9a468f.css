@@ -1,0 +1,1 @@
+.eclipse:before{display:block;content:"";height:50px;width:50px;animation:eclipse 1s infinite ease;background-color:var(--bg);border-radius:100%}@keyframes eclipse{0%{box-shadow:inset 50px 0 #fff}to{box-shadow:inset -50px 0 #fff}}

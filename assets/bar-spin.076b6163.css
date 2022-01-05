@@ -1,0 +1,1 @@
+@keyframes spin{to{transform:rotate(360deg)}}.bar-spin{animation:spin 3s infinite linear;height:50px;position:relative;width:50px}.bar-spin:before{content:"";display:block;height:50px;width:10px;animation:spin .5s infinite;background:#fff;position:absolute;left:50%;margin-left:-5px}

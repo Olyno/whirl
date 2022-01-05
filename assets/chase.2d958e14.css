@@ -1,0 +1,1 @@
+@keyframes spin{to{transform:rotate(360deg)}}.chase{position:relative}.chase:after,.chase:before{content:"";height:30px;width:30px;display:block;animation:out .5s backwards,spin 1.25s .5s infinite ease;border:5px solid #fff;border-radius:100%;box-shadow:0 -40px 0 -5px #fff;position:absolute}.chase:after{animation-delay:0s,1.25s}@keyframes out{0%{box-shadow:0 0 0 -5px #fff}}

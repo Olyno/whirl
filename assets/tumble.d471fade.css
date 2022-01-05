@@ -1,0 +1,1 @@
+@keyframes tumble{0%{transform:rotate(180deg) translateY(-17px)}to{transform:rotate(540deg) translateY(-17px)}}.tumble:after,.tumble:before{border-radius:100%;content:"";position:absolute}.tumble:after{animation:tumble 1s infinite;background-color:#fff;box-shadow:8px 6px #00f,-8px 6px #00f;height:16px;width:16px}.tumble:before{border:6px solid #fff;height:50px;width:50px}

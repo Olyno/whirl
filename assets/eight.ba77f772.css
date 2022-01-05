@@ -1,0 +1,1 @@
+@keyframes eight{0%{transform:rotate(0);transform-origin:left bottom}50%{transform-origin:left bottom;transform:rotate(360deg)}51%{transform-origin:right top}to{transform-origin:right top;transform:rotate(0)}}.eight:before{animation:eight 1.5s infinite ease;background-color:#fff;display:block;height:30px;width:30px;content:""}

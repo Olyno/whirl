@@ -1,0 +1,1 @@
+@keyframes pendulum{0%{transform:rotate(50deg)}to{transform:rotate(-50deg)}}.pendulum:after{background:#fff;border-radius:100%;bottom:0;content:"";height:30px;width:30px;position:absolute;top:50%;left:50%;margin-left:-15px;transform-origin:50% -200%;transform:translate(-50%);animation:pendulum 1s infinite alternate ease-in-out}

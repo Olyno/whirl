@@ -1,0 +1,1 @@
+.flip-square:before{animation:flip-square 1.5s infinite;background-color:#fff;content:"";display:block;height:50px;width:50px}@keyframes flip-square{0%{transform:perspective(50px) rotate(45deg) rotateX(0) rotateY(0)}50%{transform:perspective(50px) rotate(45deg) rotateX(-180deg) rotateY(0)}to{transform:perspective(50px) rotate(45deg) rotateX(-180deg) rotateY(-180deg)}}

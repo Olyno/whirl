@@ -1,0 +1,1 @@
+@keyframes fidget{10%{transform:skew(60deg)}20%{transform:skew(-60deg)}30%{transform:skew(0)}40%{transform:skewY(60deg)}50%{transform:skewY(-60deg)}60%{transform:skewY(0)}}.fidget:before{animation:fidget 1s infinite ease;background-color:#fff;border-radius:100%;display:block;content:"";height:40px;width:40px}

@@ -1,0 +1,1 @@
+@keyframes spin{to{transform:rotate(360deg)}}.double-ringed:after,.double-ringed:before{border-radius:100%;display:block;content:"";position:absolute}.double-ringed:after{height:15px;width:15px;animation:spin 1s infinite linear;box-shadow:19px 0 #00f,-19px 0 #00f}.double-ringed:before{height:40px;width:40px;border:2px solid #fff}

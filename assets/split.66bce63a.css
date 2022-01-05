@@ -1,0 +1,1 @@
+@keyframes spin{to{transform:rotate(360deg)}}.split:after,.split:before{border-radius:100%;content:"";position:absolute}.split:after{animation:spin 1s infinite linear;border:10px solid #fff;border-left-color:transparent;border-right-color:transparent;height:50px;width:50px}.split:before{background:#fff;height:14px;width:14px}

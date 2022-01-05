@@ -1,0 +1,1 @@
+@keyframes spinning-coin{0%{transform:perspective(160px) rotateY(0)}10%{transform:perspective(160px) rotateY(-65deg)}90%,to{transform:perspective(160px) rotateY(2880deg)}}.spinning-coin:before{animation:spinning-coin 3s infinite;border-radius:100%;background-color:#fff;transform-origin:center;content:"";height:40px;width:40px}
