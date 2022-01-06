@@ -49,5 +49,5 @@ Code released under MIT license.
 
 ---
 
-@jh3y 2019, @Olyno 🐻 2022
+@jh3y 2019, @Olyno 2022
 
