@@ -5,7 +5,7 @@
 ## What does this fork include?
 
 Many changes have been made to this fork, including:
- - removing the ``node-sass'' module and replacing it with ```sass''
+ - removing the ``node-sass`` module and replacing it with ```sass``
  - The removal of deprecated methods
  - Fixed some animations
  - Fixed some incompatibilities between different dev OS
